@@ -5,8 +5,8 @@ import model.entities.Scanner;
 
 public class Program {
     public static void main(String[] args){
-        Scanner scannerDevice = new Scanner("0001525AFN30","Scanner Series X-13");
-        Printer printerDevice = new Printer("3301792JBT57", "Printer HNO13");
+        Scanner scannerDevice = new Scanner("0001525AFN30");
+        Printer printerDevice = new Printer("3301792JBT57");
 
         final String doc = "Text that the devices manipulates";
 

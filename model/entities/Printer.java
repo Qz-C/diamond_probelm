@@ -2,15 +2,11 @@ package model.entities;
 
 public class Printer extends Device{
 
-    private String model;
-
     public Printer(){
-
     }
 
-    public Printer(String serialNumber, String model) {
+    public Printer(String serialNumber) {
         super(serialNumber);
-        this.model = model;
     }
 
     @Override
