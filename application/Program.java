@@ -1,14 +1,17 @@
 package application;
 
-import model.entities.Printer;
-import model.entities.Scanner;
+import model.entities.MultiFunctionalDevice;
+import model.entities.PrinterDevice;
+import model.entities.ScannerDevice;
 
 public class Program {
     public static void main(String[] args){
-        Scanner scannerDevice = new Scanner("0001525AFN30");
-        Printer printerDevice = new Printer("3301792JBT57");
+        ScannerDevice scannerDevice = new ScannerDevice("0001525AFN30");
+        PrinterDevice printerDevice = new PrinterDevice("3301792JBT57");
+        MultiFunctionalDevice allInOne = new MultiFunctionalDevice("3301792JBT57");
 
-        final String doc = "Text that the devices manipulates";
+
+        final String doc = "Text that the devices manipulate";
 
         System.out.println("Scanner Functionalities:");
         System.out.println("------------------------");
@@ -20,5 +23,10 @@ public class Program {
         printerDevice.processDoc(doc);
         printerDevice.print(doc);
 
+        System.out.println("\nMulti-functional Functionalities:");
+        System.out.println("------------------------");
+        allInOne.processDoc(doc);
+        allInOne.print(doc);
+        System.out.println(allInOne.scan());
     }
 }
